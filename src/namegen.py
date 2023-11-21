@@ -71,7 +71,9 @@ def generate():
 
     print(args.clipboard_as_name)
     if args.clipboard_as_name and pyperclip.paste() != "":
-        name += pyperclip.paste()
+        clipboard_content = pyperclip.paste()
+        clipboard_content = clipboard_content.lower().replace(' ', '-')
+        name += clipboard_content
     elif args.name is None:
         name += hex(args.bytes)
     else:
