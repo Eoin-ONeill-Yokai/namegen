@@ -20,3 +20,9 @@ sudo apt install pipx
 pipx install .
 ```
 
+In order for clipboard to work on Linux systems, make sure to install `xclip` on your system or some kind of equivalent based on the package requirements.
+
+```sh
+sudo apt install xclip
+```
+
