@@ -11,27 +11,12 @@ namegen -Cc --time %y-%m-%d #Takes the clipboard contents and puts a date timest
 
 ## Installation
 
-Depending on the system, you might need to create a virtual environment (venv). Here's one compatible with the included bash script.
+This is highly dependent on the system you're using, but I would recommend installing any python application from source with `pipx`.
+
+On Debian, for example, you would run the following in the root of this repository.
 
 ```sh
-python -m venv ./.venv # Creates a virtual environment in this repo.
-source .venv/bin/activate # Enters the virtual environment, proceed to next steps.
+sudo apt install pipx
+pipx install .
 ```
-
-On Debian, for example, it will often pester you when you try to run `pip` without being in a virtual environment. If this is the 
-case on your system, use the included shell script once the installation process is finished.
-
-Next, install the dependencies.
-```sh
-pip install -r requirements.txt
-```
-
-Lastly, you can install and test using the following command:
-
-```sh
-pip install -e . # Installs in editable mode. I haven't configured it to install properly otherwise, but it will work well enough.
-namegen --help # Prints the expected help menu.
-```
-
-You can either choose to always run namegen in the venv container or you can use my included bash script (`namegen` file at root of git repo) to run with the dependencies from inside the virtual environment.
 
